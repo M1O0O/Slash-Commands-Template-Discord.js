@@ -2,6 +2,8 @@ const Discord = require('discord.js'),
     read = require('fs-readdir-recursive'),
     client = new Discord.Client({ intents: "GUILDS" });
 
+require('dotenv').config();
+
 function replaceAll(str, find, replace) {
     var escapedFind = find.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
     return str.replace(new RegExp(escapedFind, 'g'), replace);
@@ -46,4 +48,4 @@ client.on('interactionCreate', async interaction => {
     cmd.run(client, interaction);
 });
 
-client.login('ODYxMzU4ODE1NzkwMTA0NTc2.YOIo6A.QyBvXuJbTzeFiOpTpOgbQT0jF7s');
+client.login(process.env.TOKEN);
