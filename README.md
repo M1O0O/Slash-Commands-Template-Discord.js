@@ -1,1 +1,1 @@
-Slash Commands Template Discord.js
+Little template (to be continued)
